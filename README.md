@@ -96,13 +96,19 @@ $$;
 
 
 -- ***** RANDOM INSERTION *********
+SELECT count(*) FROM detailed_table;
+SELECT count(*) FROM summary_table;
 
 INSERT INTO detailed_table 
-VALUES ('999', '99', 'September', '99.99'); 
+VALUES ('0', '0', 'January', '11.11'); 
 
 -- ******* TABLE CHECK 1 **********
 SELECT * FROM detailed_table;
+SELECT count(*) FROM detailed_table;
+
 SELECT * FROM summary_table;
+SELECT count(*) FROM summary_table;
+
 
 
 -- ****** EXECUTE STORED PROCEDURE - REFRESH ********
@@ -111,4 +117,7 @@ CALL data_refresh()
 
 --- ******* TABLE CHECK 2 *******
 SELECT * FROM detailed_table;
+SELECT count(*) FROM detailed_table;
+
 SELECT * FROM summary_table;
+SELECT count(*) FROM summary_table;
